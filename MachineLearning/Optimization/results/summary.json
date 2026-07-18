@@ -1,0 +1,6 @@
+{
+  "benchmark": "Rastrigin 5D",
+  "global_minimum": 0,
+  "best_algorithm": "PSO",
+  "best_value": 0.9949607070024413
+}

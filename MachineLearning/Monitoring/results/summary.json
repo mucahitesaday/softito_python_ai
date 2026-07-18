@@ -1,0 +1,15 @@
+{
+  "reference_shape": [
+    2500,
+    8
+  ],
+  "production_shape": [
+    2500,
+    8
+  ],
+  "drifted_features": [
+    "monthly_transactions",
+    "engagement_score"
+  ],
+  "domain_classifier_auc": 0.7242
+}
