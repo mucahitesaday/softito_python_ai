@@ -146,7 +146,6 @@ softito_python_ai/
 │       ├── 01_linear_regresyon/
 │       ├── 02_logistic_regresyon/
 │       └── 03_classic_ml/
-├── COURSE_ROADMAP.md
 ├── requirements.txt
 └── README.md
 ```
@@ -288,9 +287,6 @@ bulunduğundan çalıştırmak için Kaggle hesabı veya API anahtarı gerekmez.
 - [ ] Derin öğrenme ve görüntü işleme
 - [ ] LLM, RAG ve model uyarlama
 - [ ] Docker ve büyük veri uygulamaları
-
-Ayrıntılı ve ders dosyalarıyla eşleştirilmiş plan için
-[`COURSE_ROADMAP.md`](COURSE_ROADMAP.md) dosyasına bakın.
 
 ## Geliştirme yaklaşımı
 
