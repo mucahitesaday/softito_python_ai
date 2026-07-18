@@ -1,0 +1,15 @@
+{
+  "veri_satiri": 244,
+  "basit_regresyon": {
+    "r2": 0.4401,
+    "mae": 0.6522,
+    "rmse": 0.8631
+  },
+  "coklu_regresyon": {
+    "r2": 0.3504,
+    "mae": 0.6975,
+    "rmse": 0.9296
+  },
+  "basit_egim": 0.1094,
+  "basit_kesisim": 0.8616
+}

@@ -1,0 +1,16 @@
+{
+  "veri_satiri": 442,
+  "ozellik_sayisi": 10,
+  "basit_regresyon": {
+    "r2": 0.2334,
+    "mae": 52.26,
+    "rmse": 63.7325
+  },
+  "coklu_regresyon": {
+    "r2": 0.4526,
+    "mae": 42.7941,
+    "rmse": 53.8534
+  },
+  "cv_r2_ortalama": 0.4823,
+  "cv_r2_std": 0.0493
+}

@@ -1,7 +1,7 @@
 # Softito Python ve Yapay Zeka Çalışmaları
 
 ![Python](https://img.shields.io/badge/Python-3.9%2B-3776AB?logo=python&logoColor=white)
-![Tests](https://img.shields.io/badge/tests-13%20passed-2EA44F)
+![Tests](https://img.shields.io/badge/tests-18%20passed-2EA44F)
 ![Status](https://img.shields.io/badge/status-geliştiriliyor-F59E0B)
 
 Softito Yapay Zeka Yazılımcılığı eğitimi boyunca işlenen konuların gerçek veya
@@ -20,6 +20,7 @@ yeniden çalıştırılabilecek şekilde hazırlanmıştır.
 | 01 | Python Temelleri | Fonksiyon, döngü, sözlük, class, CSV ve JSON işlemleri | Scikit-learn Iris | Tamamlandı |
 | 02 | Detaylı Python | Başlangıçtan ileri OOP'ye beş bağımsız uygulama | E-ticaret satış verisi | Tamamlandı |
 | 03 | EDA | Yükleme, temizleme, tek/çift değişkenli analiz ve feature engineering | Palmer Penguins | Tamamlandı |
+| 04 | Linear Regression | Basit/çoklu regresyon, katsayılar ve artık analizi | Tips + Diabetes | Tamamlandı |
 
 ## Öne çıkan çalışmalar
 
@@ -71,6 +72,26 @@ Başlıca sonuçlar:
 
 ![Tür ve cinsiyete göre gaga ölçümleri](EDA/04_cift_degiskenli_analiz/figures/04_scatter_iliski.png)
 
+### 04 — Linear Regression
+
+İki farklı gerçek veri seti üzerinde basit ve çoklu doğrusal regresyon
+uygulandı. Restoran projesinde hesap tutarından bahşiş tahmini, sağlık
+projesinde ise on klinik ölçümden bir yıllık hastalık ilerleme skoru tahmini
+yapıldı.
+
+- R², MAE ve RMSE ile model değerlendirme
+- Basit ve çoklu regresyon karşılaştırması
+- One-hot encoding ile kategorik değişken dönüşümü
+- Katsayıların yön ve büyüklük açısından yorumlanması
+- Gerçek–tahmin ve artık grafikleri
+- 5-fold cross-validation
+
+Restoran verisinde basit modelin, diyabet verisinde ise çoklu modelin daha iyi
+sonuç vermesi; fazla özellik eklemenin tek başına başarı garantisi olmadığını
+gösterdi.
+
+![Bahşiş tahmini gerçek ve tahmin](MachineLearning/Supervised/01_linear_regresyon/restaurant_tip_prediction/figures/actual_vs_predicted.png)
+
 ## Repo yapısı
 
 ```text
@@ -85,6 +106,9 @@ softito_python_ai/
 │   ├── 04_cift_degiskenli_analiz/
 │   ├── 05_feature_engineering/
 │   └── data/
+├── MachineLearning/
+│   └── Supervised/
+│       └── 01_linear_regresyon/
 ├── requirements.txt
 └── README.md
 ```
@@ -160,12 +184,13 @@ python EDA/05_feature_engineering/feature_engineering.py
 
 ## Testler
 
-Projelerde toplam 13 otomatik test bulunur:
+Projelerde toplam 18 otomatik test bulunur:
 
 ```bash
 python -m unittest discover -s Python/01_python_temelleri -p "test_*.py" -v
 python -m unittest Python/02_python_detayli/test_python_detayli.py -v
 python -m unittest EDA/test_eda.py -v
+python -m unittest MachineLearning/Supervised/01_linear_regresyon/test_linear_regresyon.py -v
 ```
 
 ## Kullanılan veri setleri
@@ -194,7 +219,7 @@ bulunduğundan çalıştırmak için Kaggle hesabı veya API anahtarı gerekmez.
 - [x] Python temelleri
 - [x] İleri Python ve nesne yönelimli programlama
 - [x] Keşifsel veri analizi
-- [ ] Denetimli makine öğrenmesi
+- [ ] Denetimli makine öğrenmesi (Linear Regression tamamlandı)
 - [ ] Denetimsiz makine öğrenmesi
 - [ ] Doğal dil işleme
 - [ ] Derin öğrenme ve görüntü işleme
