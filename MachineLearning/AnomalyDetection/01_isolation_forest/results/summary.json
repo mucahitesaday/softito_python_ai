@@ -1,0 +1,31 @@
+{
+  "data_review": {
+    "train_shape": [
+      1200,
+      8
+    ],
+    "test_shape": [
+      600,
+      8
+    ],
+    "train_missing": 0,
+    "test_missing": 0,
+    "train_duplicates": 0,
+    "test_anomaly_rate": 0.1667,
+    "anomaly_type_counts": {
+      "Normal": 500,
+      "Asiri_Isinma": 25,
+      "Rulman_Arizasi": 25,
+      "Kombine_Ariza": 25,
+      "Basinc_Kacagi": 25
+    }
+  },
+  "test_metrics": {
+    "accuracy": 0.9383,
+    "precision": 0.7647,
+    "recall": 0.91,
+    "f1": 0.8311,
+    "roc_auc": 0.9649,
+    "detected_anomalies": 119.0
+  }
+}

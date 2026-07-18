@@ -19,3 +19,11 @@ birlikte ele alınır.
 |---|---|---|---|
 | 01 | Kümeleme algoritmaları | Dijital müşteri davranış segmentasyonu | Tamamlandı |
 | 02 | RFM analizi | E-ticaret müşteri segmentasyonu | Tamamlandı |
+
+## Anomaly Detection
+
+| No | Algoritma | Proje | Durum |
+|---|---|---|---|
+| 01 | Isolation Forest | Üretim sensörü arıza tespiti | Tamamlandı |
+| 02 | One-Class SVM | Ağ saldırısı tespiti | Tamamlandı |
+| 03 | COPOD | Finansal işlem anomalileri | Tamamlandı |

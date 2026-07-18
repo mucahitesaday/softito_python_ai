@@ -1,0 +1,5 @@
+anomaly_type,sample_count,detected,recall
+Asiri_Isinma,25,25,1.0
+Basinc_Kacagi,25,16,0.64
+Kombine_Ariza,25,25,1.0
+Rulman_Arizasi,25,25,1.0

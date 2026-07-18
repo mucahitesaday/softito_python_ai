@@ -1,0 +1,5 @@
+anomaly_type,amount,transactions_24h,risk_score,geo_distance_km,device_age_days,hour_deviation
+Cografi_Uyumsuzluk,1.4893,1.1842,1.5454,7.6971,3.8488,1.4545
+Hesap_Ele_Gecirme,1.2106,1.2348,7.6971,7.6971,3.8488,7.6971
+Hizli_Mikro_Islem,3.5596,7.6971,7.6971,1.3442,1.5185,1.5409
+Yuksek_Tutar,7.6971,1.0115,7.6971,1.1982,1.3925,1.4883

@@ -1,0 +1,5 @@
+traffic_type,sample_count,detected,recall
+DDoS,30,30,1.0
+Kimlik_Deneme,30,30,1.0
+Port_Tarama,30,30,1.0
+Veri_Sizdirma,30,30,1.0
