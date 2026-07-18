@@ -1,0 +1,18 @@
+{
+  "Elektronik": {
+    "siparis_sayisi": 4,
+    "toplam_adet": 6
+  },
+  "Ev": {
+    "siparis_sayisi": 4,
+    "toplam_adet": 5
+  },
+  "Kitap": {
+    "siparis_sayisi": 4,
+    "toplam_adet": 8
+  },
+  "Spor": {
+    "siparis_sayisi": 3,
+    "toplam_adet": 9
+  }
+}

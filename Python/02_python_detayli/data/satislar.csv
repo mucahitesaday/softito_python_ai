@@ -1,0 +1,16 @@
+siparis_id,tarih,sehir,kategori,urun,adet,birim_fiyat,puan,iade
+S001,2026-01-05,Istanbul,Elektronik,Kablosuz Kulaklik,2,1250.00,5,hayir
+S002,2026-01-06,Ankara,Ev,Masa Lambasi,1,640.00,4,hayir
+S003,2026-01-07,Izmir,Kitap,Python ile Veri Bilimi,3,310.00,5,hayir
+S004,2026-01-08,Bursa,Spor,Yoga Mati,2,475.00,3,evet
+S005,2026-01-09,Istanbul,Elektronik,Mekanik Klavye,1,2200.00,5,hayir
+S006,2026-01-10,Antalya,Ev,Filtre Kahve Makinesi,1,1850.00,4,hayir
+S007,2026-01-11,Ankara,Kitap,Yapay Zekaya Giris,2,420.00,4,hayir
+S008,2026-01-12,Izmir,Spor,Kosu Cantasi,3,290.00,2,evet
+S009,2026-01-13,Istanbul,Ev,Ergonomik Yastik,2,780.00,5,hayir
+S010,2026-01-14,Bursa,Elektronik,USB-C Hub,2,890.00,4,hayir
+S011,2026-01-15,Antalya,Kitap,Istatistik Uygulamalari,1,365.00,5,hayir
+S012,2026-01-16,Ankara,Spor,Direnc Bandi Seti,4,240.00,4,hayir
+S013,2026-01-17,Izmir,Elektronik,Akilli Bileklik,1,1750.00,3,hayir
+S014,2026-01-18,Istanbul,Kitap,Algoritma Tasarimi,2,395.00,4,hayir
+S015,2026-01-19,Bursa,Ev,Hava Nemlendirici,1,1320.00,2,evet
