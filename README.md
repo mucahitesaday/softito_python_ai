@@ -1,7 +1,7 @@
 # Softito Python ve Yapay Zeka Çalışmaları
 
 ![Python](https://img.shields.io/badge/Python-3.9%2B-3776AB?logo=python&logoColor=white)
-![Tests](https://img.shields.io/badge/tests-33%20passed-2EA44F)
+![Tests](https://img.shields.io/badge/tests-39%20passed-2EA44F)
 ![Status](https://img.shields.io/badge/status-geliştiriliyor-F59E0B)
 
 Softito Yapay Zeka Yazılımcılığı eğitimi boyunca işlenen konuların gerçek veya
@@ -24,6 +24,7 @@ yeniden çalıştırılabilecek şekilde hazırlanmıştır.
 | 05 | Logistic Regression | İkili/çok sınıflı tahmin, ROC ve eşik analizi | Breast Cancer + Wine | Tamamlandı |
 | 06 | Klasik ML Algoritmaları | Polynomial, Tree, KNN/NB, SVM ve Boosting | 5 farklı uygulama | Tamamlandı |
 | 07 | Denetimsiz Öğrenme | Kümeleme karşılaştırması ve RFM segmentasyonu | 2 özgün müşteri veri seti | Tamamlandı |
+| 08 | Anomali Tespiti | Isolation Forest, One-Class SVM ve COPOD | Sensör, ağ ve finans verisi | Tamamlandı |
 
 ## Öne çıkan çalışmalar
 
@@ -144,6 +145,23 @@ RFM özellikleri üretildi. Beş müşteri segmenti oluşturuldu ve en iyi K-Mea
 
 ![RFM segment profilleri](MachineLearning/Unsupervised/02_rfm_segmentation/figures/segment_profile_heatmap.png)
 
+### 08 — Anomali tespiti
+
+Üç farklı alanda yalnızca normal davranışı öğrenen veya dağılım kuyruklarını
+inceleyen anomali modelleri kuruldu.
+
+- Üretim sensörlerinde Isolation Forest ve contamination analizi
+- Ağ trafiğinde One-Class SVM için `nu` ve `gamma` taraması
+- Finansal işlemlerde ECDF tabanlı COPOD ve özellik katkıları
+- Arıza ve saldırı türü bazında yakalama oranları
+- COPOD, Isolation Forest ve One-Class SVM karşılaştırması
+
+Isolation Forest üretim arızalarında `ROC-AUC = 0.9649`; One-Class SVM ağ
+saldırılarında `F1 = 0.9524`; COPOD finansal işlemlerde `ROC-AUC = 0.9978`
+sonucuna ulaştı.
+
+![COPOD özellik katkıları](MachineLearning/AnomalyDetection/03_copod/figures/feature_contributions.png)
+
 ## Repo yapısı
 
 ```text
@@ -163,9 +181,13 @@ softito_python_ai/
 │   │   ├── 01_linear_regresyon/
 │   │   ├── 02_logistic_regresyon/
 │   │   └── 03_classic_ml/
-│   └── Unsupervised/
-│       ├── 01_clustering_comparison/
-│       └── 02_rfm_segmentation/
+│   ├── Unsupervised/
+│   │   ├── 01_clustering_comparison/
+│   │   └── 02_rfm_segmentation/
+│   └── AnomalyDetection/
+│       ├── 01_isolation_forest/
+│       ├── 02_one_class_svm/
+│       └── 03_copod/
 ├── requirements.txt
 └── README.md
 ```
@@ -176,7 +198,7 @@ Her çalışma klasöründe şu dosyalar bulunur:
 - Çalıştırılabilir `.py` dosyası
 - Kullanılan veya otomatik oluşturulan veri
 - Grafiklerin bulunduğu `figures/` klasörü
-- CSV, JSON veya TXT sonuçlarının bulunduğu `outputs/` klasörü
+- CSV, JSON veya TXT sonuçlarının bulunduğu `outputs/` veya `results/` klasörü
 - Davranışları doğrulayan otomatik testler
 
 ## Kurulum
@@ -253,11 +275,14 @@ python MachineLearning/Supervised/03_classic_ml/04_svm/moons_svm.py
 python MachineLearning/Supervised/03_classic_ml/05_boosting/maintenance_boosting.py
 python MachineLearning/Unsupervised/01_clustering_comparison/digital_customer_clustering.py
 python MachineLearning/Unsupervised/02_rfm_segmentation/ecommerce_rfm.py
+python MachineLearning/AnomalyDetection/01_isolation_forest/production_sensor_isolation.py
+python MachineLearning/AnomalyDetection/02_one_class_svm/network_traffic_ocsvm.py
+python MachineLearning/AnomalyDetection/03_copod/transaction_copod.py
 ```
 
 ## Testler
 
-Projelerde toplam 33 otomatik test bulunur:
+Projelerde toplam 39 otomatik test bulunur:
 
 ```bash
 python -m unittest discover -s Python/01_python_temelleri -p "test_*.py" -v
@@ -267,6 +292,7 @@ python -m unittest MachineLearning/Supervised/01_linear_regresyon/test_linear_re
 python -m unittest MachineLearning/Supervised/02_logistic_regresyon/test_logistic_regresyon.py -v
 python -m unittest MachineLearning/Supervised/03_classic_ml/test_classic_ml.py -v
 python -m unittest MachineLearning/Unsupervised/test_unsupervised.py -v
+python -m unittest MachineLearning/AnomalyDetection/test_anomaly_detection.py -v
 ```
 
 ## Kullanılan veri setleri
@@ -287,6 +313,9 @@ python -m unittest MachineLearning/Unsupervised/test_unsupervised.py -v
 | Makine sensörleri | Boosting karşılaştırması | Eğitim amacıyla özgün oluşturuldu |
 | Dijital müşteri davranışları | Kümeleme algoritmaları | Eğitim amacıyla özgün oluşturuldu |
 | E-ticaret işlemleri | RFM müşteri segmentasyonu | Eğitim amacıyla özgün oluşturuldu |
+| Üretim sensörleri | Isolation Forest arıza tespiti | Eğitim amacıyla özgün oluşturuldu |
+| Ağ trafiği | One-Class SVM saldırı tespiti | Eğitim amacıyla özgün oluşturuldu |
+| Finansal işlemler | COPOD anomali tespiti | Eğitim amacıyla özgün oluşturuldu |
 
 Palmer Penguins verisi CC0 lisansıyla yayımlanmıştır. Veri dosyası repoda
 bulunduğundan çalıştırmak için Kaggle hesabı veya API anahtarı gerekmez.

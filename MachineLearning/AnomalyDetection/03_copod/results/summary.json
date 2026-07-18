@@ -1,0 +1,13 @@
+{
+  "train_shape": [
+    2200,
+    9
+  ],
+  "test_shape": [
+    1080,
+    9
+  ],
+  "anomaly_rate": 0.1667,
+  "copod_threshold": 12.4736,
+  "best_model_by_auc": "OneClassSVM"
+}

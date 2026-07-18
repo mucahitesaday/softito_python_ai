@@ -1,0 +1,4 @@
+model,precision,recall,f1,roc_auc,detected,fit_seconds
+COPOD,0.8,1.0,0.8889,0.9978,225,0.0036
+IsolationForest,0.8,1.0,0.8889,0.995,225,0.3706
+OneClassSVM,0.7229,1.0,0.8392,1.0,249,0.0097
