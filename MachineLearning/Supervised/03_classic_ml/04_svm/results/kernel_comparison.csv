@@ -1,0 +1,5 @@
+model,train_accuracy,test_accuracy,accuracy,f1,roc_auc,support_vectors
+linear,0.859,0.88,0.88,0.8814,0.953,198
+polynomial,0.8533,0.8914,0.8914,0.8939,0.9643,200
+rbf,0.8971,0.92,0.92,0.9205,0.9832,166
+rbf_tuned,0.8971,0.92,0.92,0.9205,0.9832,166

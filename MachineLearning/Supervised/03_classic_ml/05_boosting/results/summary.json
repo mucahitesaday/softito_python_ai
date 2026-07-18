@@ -1,0 +1,5 @@
+{
+  "rows": 1800,
+  "failure_rate": 0.2844,
+  "xgboost_available": false
+}
