@@ -1,7 +1,7 @@
 # Softito Python ve Yapay Zeka Çalışmaları
 
 ![Python](https://img.shields.io/badge/Python-3.9%2B-3776AB?logo=python&logoColor=white)
-![Tests](https://img.shields.io/badge/tests-18%20passed-2EA44F)
+![Tests](https://img.shields.io/badge/tests-23%20passed-2EA44F)
 ![Status](https://img.shields.io/badge/status-geliştiriliyor-F59E0B)
 
 Softito Yapay Zeka Yazılımcılığı eğitimi boyunca işlenen konuların gerçek veya
@@ -21,6 +21,7 @@ yeniden çalıştırılabilecek şekilde hazırlanmıştır.
 | 02 | Detaylı Python | Başlangıçtan ileri OOP'ye beş bağımsız uygulama | E-ticaret satış verisi | Tamamlandı |
 | 03 | EDA | Yükleme, temizleme, tek/çift değişkenli analiz ve feature engineering | Palmer Penguins | Tamamlandı |
 | 04 | Linear Regression | Basit/çoklu regresyon, katsayılar ve artık analizi | Tips + Diabetes | Tamamlandı |
+| 05 | Logistic Regression | İkili/çok sınıflı tahmin, ROC ve eşik analizi | Breast Cancer + Wine | Tamamlandı |
 
 ## Öne çıkan çalışmalar
 
@@ -92,6 +93,22 @@ gösterdi.
 
 ![Bahşiş tahmini gerçek ve tahmin](MachineLearning/Supervised/01_linear_regresyon/restaurant_tip_prediction/figures/actual_vs_predicted.png)
 
+### 05 — Logistic Regression
+
+İkili ve çok sınıflı iki gerçek veri seti üzerinde sınıflandırma modelleri
+kuruldu. Meme tümörü çalışmasında kötü huylu sınıfın yakalanması ve karar
+eşiğinin precision/recall dengesine etkisi; şarap çalışmasında ise üç sınıfın
+One-vs-Rest yaklaşımıyla ayrılması incelendi.
+
+- StandardScaler ve Pipeline ile veri sızıntısını önleyen modelleme
+- Accuracy, precision, recall, F1 ve ROC-AUC
+- Confusion matrix ve ROC eğrileri
+- Sınıflandırma eşiği karşılaştırması
+- Çok sınıflı katsayı ısı haritası
+- Stratified 5-fold cross-validation
+
+![Tümör sınıflandırma ROC eğrisi](MachineLearning/Supervised/02_logistic_regresyon/breast_cancer_diagnosis/figures/roc_curve.png)
+
 ## Repo yapısı
 
 ```text
@@ -108,7 +125,8 @@ softito_python_ai/
 │   └── data/
 ├── MachineLearning/
 │   └── Supervised/
-│       └── 01_linear_regresyon/
+│       ├── 01_linear_regresyon/
+│       └── 02_logistic_regresyon/
 ├── requirements.txt
 └── README.md
 ```
@@ -191,6 +209,7 @@ python -m unittest discover -s Python/01_python_temelleri -p "test_*.py" -v
 python -m unittest Python/02_python_detayli/test_python_detayli.py -v
 python -m unittest EDA/test_eda.py -v
 python -m unittest MachineLearning/Supervised/01_linear_regresyon/test_linear_regresyon.py -v
+python -m unittest MachineLearning/Supervised/02_logistic_regresyon/test_logistic_regresyon.py -v
 ```
 
 ## Kullanılan veri setleri
@@ -200,6 +219,10 @@ python -m unittest MachineLearning/Supervised/01_linear_regresyon/test_linear_re
 | Iris | Python temelleri | Scikit-learn yerleşik veri seti |
 | E-ticaret satışları | Detaylı Python alıştırmaları | Eğitim amacıyla özgün oluşturuldu |
 | Palmer Penguins | EDA ve feature engineering | [Resmî proje](https://allisonhorst.github.io/palmerpenguins/) |
+| Tips | Bahşiş için Linear Regression | Seaborn veri deposu |
+| Diabetes | İlerleme skoru için Linear Regression | Scikit-learn yerleşik veri seti |
+| Breast Cancer Wisconsin | İkili Logistic Regression | Scikit-learn yerleşik veri seti |
+| Wine Recognition | Çok sınıflı Logistic Regression | Scikit-learn yerleşik veri seti |
 
 Palmer Penguins verisi CC0 lisansıyla yayımlanmıştır. Veri dosyası repoda
 bulunduğundan çalıştırmak için Kaggle hesabı veya API anahtarı gerekmez.
@@ -219,7 +242,7 @@ bulunduğundan çalıştırmak için Kaggle hesabı veya API anahtarı gerekmez.
 - [x] Python temelleri
 - [x] İleri Python ve nesne yönelimli programlama
 - [x] Keşifsel veri analizi
-- [ ] Denetimli makine öğrenmesi (Linear Regression tamamlandı)
+- [ ] Denetimli makine öğrenmesi (Linear ve Logistic Regression tamamlandı)
 - [ ] Denetimsiz makine öğrenmesi
 - [ ] Doğal dil işleme
 - [ ] Derin öğrenme ve görüntü işleme
