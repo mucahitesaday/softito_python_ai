@@ -10,3 +10,4 @@ birlikte ele alınır.
 | No | Algoritma | Projeler | Durum |
 |---|---|---|---|
 | 01 | Linear Regression | Bahşiş tahmini, diyabet ilerleme tahmini | Tamamlandı |
+| 02 | Logistic Regression | Tümör teşhisi, şarap türü sınıflandırma | Tamamlandı |
