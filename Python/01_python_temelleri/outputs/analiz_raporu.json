@@ -1,0 +1,36 @@
+{
+  "veri_seti": "Iris",
+  "toplam_kayit": 150,
+  "tur_sayilari": {
+    "setosa": 50,
+    "versicolor": 50,
+    "virginica": 50
+  },
+  "tur_ortalamalari": {
+    "setosa": {
+      "sepal_length_cm": 5.006,
+      "sepal_width_cm": 3.428,
+      "petal_length_cm": 1.462,
+      "petal_width_cm": 0.246
+    },
+    "versicolor": {
+      "sepal_length_cm": 5.936,
+      "sepal_width_cm": 2.77,
+      "petal_length_cm": 4.26,
+      "petal_width_cm": 1.326
+    },
+    "virginica": {
+      "sepal_length_cm": 6.588,
+      "sepal_width_cm": 2.974,
+      "petal_length_cm": 5.552,
+      "petal_width_cm": 2.026
+    }
+  },
+  "en_uzun_tac_yapragi": {
+    "sepal_length_cm": 7.7,
+    "sepal_width_cm": 2.6,
+    "petal_length_cm": 6.9,
+    "petal_width_cm": 2.3,
+    "species": "virginica"
+  }
+}
