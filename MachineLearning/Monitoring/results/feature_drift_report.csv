@@ -1,0 +1,9 @@
+feature,type,test_statistic,p_value,psi,js_divergence,drift
+age,numeric,0.0892,0.0,0.04182,,False
+monthly_income,numeric,0.106,0.0,0.06777,,False
+monthly_transactions,numeric,0.2556,0.0,0.39855,,True
+average_basket,numeric,0.048,0.0063,0.01061,,False
+engagement_score,numeric,0.1684,0.0,0.1583,,True
+channel,categorical,68.13053,0.0,,0.00986,False
+region,categorical,4.11881,0.24892,,0.00059,False
+membership,categorical,43.09626,0.0,,0.00627,False
