@@ -6,9 +6,9 @@
 
 Softito Yapay Zeka Yazılımcılığı eğitimi boyunca işlenen konuların gerçek veya
 özgün veri setleri üzerinde uygulandığı, çalıştırılabilir Python projelerinden
-oluşan eğitim reposudur.
+oluşan repodur.
 
-Bu repo yalnızca konu anlatımı içermez. Her bölümde veri yükleme, analiz,
+Her bölümde veri yükleme, analiz,
 raporlama, çıktı üretme ve otomatik test adımları birlikte uygulanır. Kodların
 tamamı Türkçe açıklamalara sahiptir ve macOS, Linux veya Windows üzerinde
 yeniden çalıştırılabilecek şekilde hazırlanmıştır.
