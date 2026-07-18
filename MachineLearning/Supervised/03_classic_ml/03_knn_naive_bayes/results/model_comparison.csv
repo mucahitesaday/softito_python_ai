@@ -1,0 +1,3 @@
+model,accuracy,f1_macro,cv_f1_mean,cv_f1_std,fit_ms,prediction_ms
+KNN (k=1),0.9711,0.9706,0.972,0.0056,14.609,438.93
+GaussianNB,0.8289,0.8305,0.8462,0.0168,2.5437,13.763

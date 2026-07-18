@@ -1,0 +1,79 @@
+|--- performance_score <= 68.81
+|   |--- training_hours <= 109.50
+|   |   |--- projects_completed <= 11.50
+|   |   |   |--- performance_score <= 63.63
+|   |   |   |   |--- experience_years <= 10.50
+|   |   |   |   |   |--- class: 0
+|   |   |   |   |--- experience_years >  10.50
+|   |   |   |   |   |--- class: 0
+|   |   |   |--- performance_score >  63.63
+|   |   |   |   |--- training_hours <= 81.50
+|   |   |   |   |   |--- class: 0
+|   |   |   |   |--- training_hours >  81.50
+|   |   |   |   |   |--- class: 1
+|   |   |--- projects_completed >  11.50
+|   |   |   |--- experience_years <= 7.50
+|   |   |   |   |--- training_hours <= 75.00
+|   |   |   |   |   |--- class: 0
+|   |   |   |   |--- training_hours >  75.00
+|   |   |   |   |   |--- class: 0
+|   |   |   |--- experience_years >  7.50
+|   |   |   |   |--- training_hours <= 27.50
+|   |   |   |   |   |--- class: 0
+|   |   |   |   |--- training_hours >  27.50
+|   |   |   |   |   |--- class: 1
+|   |--- training_hours >  109.50
+|   |   |--- experience_years <= 5.00
+|   |   |   |--- class: 0
+|   |   |--- experience_years >  5.00
+|   |   |   |--- education_high_school <= 0.50
+|   |   |   |   |--- class: 1
+|   |   |   |--- education_high_school >  0.50
+|   |   |   |   |--- class: 1
+|--- performance_score >  68.81
+|   |--- experience_years <= 4.50
+|   |   |--- performance_score <= 89.87
+|   |   |   |--- training_hours <= 80.00
+|   |   |   |   |--- projects_completed <= 8.50
+|   |   |   |   |   |--- class: 0
+|   |   |   |   |--- projects_completed >  8.50
+|   |   |   |   |   |--- class: 0
+|   |   |   |--- training_hours >  80.00
+|   |   |   |   |--- performance_score <= 77.80
+|   |   |   |   |   |--- class: 0
+|   |   |   |   |--- performance_score >  77.80
+|   |   |   |   |   |--- class: 1
+|   |   |--- performance_score >  89.87
+|   |   |   |--- projects_completed <= 2.50
+|   |   |   |   |--- performance_score <= 95.01
+|   |   |   |   |   |--- class: 0
+|   |   |   |   |--- performance_score >  95.01
+|   |   |   |   |   |--- class: 1
+|   |   |   |--- projects_completed >  2.50
+|   |   |   |   |--- training_hours <= 18.50
+|   |   |   |   |   |--- class: 1
+|   |   |   |   |--- training_hours >  18.50
+|   |   |   |   |   |--- class: 1
+|   |--- experience_years >  4.50
+|   |   |--- performance_score <= 82.71
+|   |   |   |--- department_sales <= 0.50
+|   |   |   |   |--- department_operations <= 0.50
+|   |   |   |   |   |--- class: 1
+|   |   |   |   |--- department_operations >  0.50
+|   |   |   |   |   |--- class: 1
+|   |   |   |--- department_sales >  0.50
+|   |   |   |   |--- performance_score <= 71.49
+|   |   |   |   |   |--- class: 1
+|   |   |   |   |--- performance_score >  71.49
+|   |   |   |   |   |--- class: 0
+|   |   |--- performance_score >  82.71
+|   |   |   |--- projects_completed <= 6.50
+|   |   |   |   |--- training_hours <= 38.00
+|   |   |   |   |   |--- class: 1
+|   |   |   |   |--- training_hours >  38.00
+|   |   |   |   |   |--- class: 1
+|   |   |   |--- projects_completed >  6.50
+|   |   |   |   |--- training_hours <= 32.00
+|   |   |   |   |   |--- class: 1
+|   |   |   |   |--- training_hours >  32.00
+|   |   |   |   |   |--- class: 1

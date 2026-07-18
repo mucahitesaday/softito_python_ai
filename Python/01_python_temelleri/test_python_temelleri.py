@@ -1,10 +1,23 @@
 """Python temelleri Iris çalışmasının basit doğrulama testleri."""
 
+import importlib.util
+import sys
 import tempfile
 import unittest
 from pathlib import Path
 
-from python_temelleri_iris import IrisAnalizi, sonuclari_kaydet
+KLASOR = Path(__file__).resolve().parent
+SPEC = importlib.util.spec_from_file_location(
+    "python_temelleri_iris", KLASOR / "python_temelleri_iris.py"
+)
+if SPEC is None or SPEC.loader is None:
+    raise ImportError("python_temelleri_iris.py yüklenemedi")
+MODUL = importlib.util.module_from_spec(SPEC)
+sys.modules[SPEC.name] = MODUL
+SPEC.loader.exec_module(MODUL)
+
+IrisAnalizi = MODUL.IrisAnalizi
+sonuclari_kaydet = MODUL.sonuclari_kaydet
 
 
 class IrisAnaliziTesti(unittest.TestCase):
