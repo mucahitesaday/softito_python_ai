@@ -1,0 +1,30 @@
+{
+  "rag": {
+    "question": "Model belleğini nasıl azaltırım?",
+    "context": [
+      {
+        "text": "Quantization model ağırlıklarını daha az bit ile saklayarak belleği azaltır.",
+        "score": 0.31622776601683794
+      },
+      {
+        "text": "Vektör veritabanı embedding benzerliğine göre belge arar.",
+        "score": 0.0
+      }
+    ],
+    "answer": "Quantization model ağırlıklarını daha az bit ile saklayarak belleği azaltır."
+  },
+  "fine_tuning_record": {
+    "instruction": "RAG nedir?",
+    "response": "RAG, dil modelinin cevabını güvenilir belgelerle destekler."
+  },
+  "lora_parameters": 12288,
+  "full_parameters": 589824,
+  "quantized": [
+    -102,
+    -25,
+    13,
+    83,
+    127
+  ],
+  "quantization_scale": 0.007874015748031496
+}

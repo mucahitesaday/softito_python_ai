@@ -1,0 +1,20 @@
+{
+  "pipeline": "daily_sales_etl",
+  "tasks": [
+    "extract",
+    "validate",
+    "transform",
+    "load"
+  ],
+  "quality_before": {
+    "rows": 5,
+    "missing": 1,
+    "duplicates": 1
+  },
+  "quality_after": {
+    "rows": 4,
+    "missing": 0,
+    "duplicates": 0
+  },
+  "artifact": "/workspace/scratch/073101481b91/softito_python_ai/MLOps/outputs/daily_sales.csv"
+}
