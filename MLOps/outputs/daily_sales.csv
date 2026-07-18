@@ -1,0 +1,5 @@
+customer_id,amount,status,net_amount
+1,120.0,paid,120.0
+2,85.0,paid,85.0
+3,120.0,paid,120.0
+4,240.0,refund,-240.0

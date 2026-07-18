@@ -1,7 +1,7 @@
 # Softito Python ve Yapay Zeka Çalışmaları
 
 ![Python](https://img.shields.io/badge/Python-3.9%2B-3776AB?logo=python&logoColor=white)
-![Tests](https://img.shields.io/badge/tests-39%20passed-2EA44F)
+![Tests](https://img.shields.io/badge/tests-51%20passed-2EA44F)
 ![Status](https://img.shields.io/badge/status-geliştiriliyor-F59E0B)
 
 Softito Yapay Zeka Yazılımcılığı eğitimi boyunca işlenen konuların gerçek veya
@@ -25,6 +25,13 @@ yeniden çalıştırılabilecek şekilde hazırlanmıştır.
 | 06 | Klasik ML Algoritmaları | Polynomial, Tree, KNN/NB, SVM ve Boosting | 5 farklı uygulama | Tamamlandı |
 | 07 | Denetimsiz Öğrenme | Kümeleme karşılaştırması ve RFM segmentasyonu | 2 özgün müşteri veri seti | Tamamlandı |
 | 08 | Anomali Tespiti | Isolation Forest, One-Class SVM ve COPOD | Sensör, ağ ve finans verisi | Tamamlandı |
+| 09 | Model İzleme ve Optimizasyon | Data drift, GA, CMA-ES ve PSO | Müşteri davranışı + Rastrigin | Tamamlandı |
+| 10 | Deep Learning | ANN, RNN, LSTM, Attention ve Transformer | Sentetik sınıflandırma + sekans | Tamamlandı |
+| 11 | Computer Vision | Konvolüsyon, kenar ve bölge analizi | Sentetik görüntü | Tamamlandı |
+| 12 | NLP | TF-IDF, embedding ve sentiment | Türkçe haber metinleri | Tamamlandı |
+| 13 | LLM ve RAG | Semantic search, LoRA ve quantization | Bilgi belgeleri | Tamamlandı |
+| 14 | MLOps ve Docker | ETL, kalite kontrolü ve container | Satış işlemleri | Tamamlandı |
+| 15 | Big Data | Mini DFS, YARN ve Spark | Dağıtık metin işleme | Tamamlandı |
 
 ## Öne çıkan çalışmalar
 
@@ -188,6 +195,13 @@ softito_python_ai/
 │       ├── 01_isolation_forest/
 │       ├── 02_one_class_svm/
 │       └── 03_copod/
+├── DeepLearning/
+├── ComputerVision/
+├── NLP/
+├── LLM_RAG/
+├── MLOps/
+├── BigData/
+├── Docker/
 ├── requirements.txt
 └── README.md
 ```

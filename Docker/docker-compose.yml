@@ -1,0 +1,10 @@
+services:
+  softito-pipeline:
+    build:
+      context: ..
+      dockerfile: Docker/Dockerfile
+    volumes:
+      - pipeline-output:/app/MLOps/outputs
+    restart: "no"
+volumes:
+  pipeline-output:

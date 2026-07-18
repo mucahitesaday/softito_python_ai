@@ -1,0 +1,19 @@
+{
+  "document_count": 64,
+  "tfidf_features": 60,
+  "embedding_shape": [
+    35,
+    8
+  ],
+  "vocabulary_sample": [
+    "altında",
+    "artıracak",
+    "artışı",
+    "açıkladı",
+    "beklentilerin",
+    "borç",
+    "büyüme",
+    "büyüyor"
+  ],
+  "sentiment_accuracy": 1.0
+}

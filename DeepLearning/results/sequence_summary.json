@@ -1,0 +1,22 @@
+{
+  "rnn_shape": [
+    12,
+    6
+  ],
+  "lstm_shape": [
+    12,
+    6
+  ],
+  "attention_row_sum": 0.9999999999999999,
+  "generated_tokens": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    2,
+    2,
+    2
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "dfs_blocks": 3,
+  "node_block_counts": [
+    2,
+    2,
+    2
+  ],
+  "scheduled_jobs": [
+    "etl",
+    "model",
+    "report"
+  ],
+  "word_count": {
+    "veri": 4,
+    "python": 2,
+    "büyük": 1,
+    "spark": 1,
+    "yapay": 1,
+    "zeka": 1
+  }
+}
