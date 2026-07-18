@@ -1,0 +1,5 @@
+model,accuracy,f1,roc_auc
+linear,0.88,0.8814,0.953
+polynomial,0.8914,0.8939,0.9643
+rbf,0.92,0.9205,0.9832
+rbf_tuned,0.92,0.9205,0.9832

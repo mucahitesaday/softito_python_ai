@@ -1,0 +1,7 @@
+{
+  "rows": 700,
+  "best_params": {
+    "model__C": 1,
+    "model__gamma": 0.5
+  }
+}

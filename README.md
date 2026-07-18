@@ -1,7 +1,7 @@
 # Softito Python ve Yapay Zeka Çalışmaları
 
 ![Python](https://img.shields.io/badge/Python-3.9%2B-3776AB?logo=python&logoColor=white)
-![Tests](https://img.shields.io/badge/tests-23%20passed-2EA44F)
+![Tests](https://img.shields.io/badge/tests-28%20passed-2EA44F)
 ![Status](https://img.shields.io/badge/status-geliştiriliyor-F59E0B)
 
 Softito Yapay Zeka Yazılımcılığı eğitimi boyunca işlenen konuların gerçek veya
@@ -22,6 +22,7 @@ yeniden çalıştırılabilecek şekilde hazırlanmıştır.
 | 03 | EDA | Yükleme, temizleme, tek/çift değişkenli analiz ve feature engineering | Palmer Penguins | Tamamlandı |
 | 04 | Linear Regression | Basit/çoklu regresyon, katsayılar ve artık analizi | Tips + Diabetes | Tamamlandı |
 | 05 | Logistic Regression | İkili/çok sınıflı tahmin, ROC ve eşik analizi | Breast Cancer + Wine | Tamamlandı |
+| 06 | Klasik ML Algoritmaları | Polynomial, Tree, KNN/NB, SVM ve Boosting | 5 farklı uygulama | Tamamlandı |
 
 ## Öne çıkan çalışmalar
 
@@ -109,6 +110,23 @@ One-vs-Rest yaklaşımıyla ayrılması incelendi.
 
 ![Tümör sınıflandırma ROC eğrisi](MachineLearning/Supervised/02_logistic_regresyon/breast_cancer_diagnosis/figures/roc_curve.png)
 
+### 06 — Klasik makine öğrenmesi paketi
+
+Ders arşivindeki Polynomial Regression, Decision Tree, KNN, Naive Bayes, SVM,
+AdaBoost ve XGBoost başlıkları beş özgün uygulamada bir araya getirildi.
+
+- Enerji talebinde polinom derecesi ve bias–variance karşılaştırması
+- Çalışan terfi tahmininde Decision Tree ve GridSearchCV
+- Digits veri setinde KNN ve Gaussian Naive Bayes
+- İç içe geçmiş sınıflarda linear, polynomial ve RBF-SVM
+- Makine arıza riskinde AdaBoost, Gradient Boosting ve opsiyonel XGBoost
+
+Başlıca sonuçlar: 3. derece polinom `R² = 0.9774`, Decision Tree
+`ROC-AUC = 0.8038`, KNN accuracy `0.9711`, RBF-SVM accuracy `0.9200` ve
+Gradient Boosting `ROC-AUC = 0.8696`.
+
+![SVM karar sınırları](MachineLearning/Supervised/03_classic_ml/04_svm/figures/decision_boundaries.png)
+
 ## Repo yapısı
 
 ```text
@@ -126,7 +144,9 @@ softito_python_ai/
 ├── MachineLearning/
 │   └── Supervised/
 │       ├── 01_linear_regresyon/
-│       └── 02_logistic_regresyon/
+│       ├── 02_logistic_regresyon/
+│       └── 03_classic_ml/
+├── COURSE_ROADMAP.md
 ├── requirements.txt
 └── README.md
 ```
@@ -200,9 +220,23 @@ python EDA/04_cift_degiskenli_analiz/cift_degiskenli_analiz.py
 python EDA/05_feature_engineering/feature_engineering.py
 ```
 
+### Machine Learning
+
+```bash
+python MachineLearning/Supervised/01_linear_regresyon/restaurant_tip_prediction/tip_regression.py
+python MachineLearning/Supervised/01_linear_regresyon/diabetes_progression/diabetes_regression.py
+python MachineLearning/Supervised/02_logistic_regresyon/breast_cancer_diagnosis/breast_cancer_logistic.py
+python MachineLearning/Supervised/02_logistic_regresyon/wine_classification/wine_logistic.py
+python MachineLearning/Supervised/03_classic_ml/01_polynomial_regression/energy_polynomial.py
+python MachineLearning/Supervised/03_classic_ml/02_decision_tree/promotion_tree.py
+python MachineLearning/Supervised/03_classic_ml/03_knn_naive_bayes/digits_comparison.py
+python MachineLearning/Supervised/03_classic_ml/04_svm/moons_svm.py
+python MachineLearning/Supervised/03_classic_ml/05_boosting/maintenance_boosting.py
+```
+
 ## Testler
 
-Projelerde toplam 18 otomatik test bulunur:
+Projelerde toplam 28 otomatik test bulunur:
 
 ```bash
 python -m unittest discover -s Python/01_python_temelleri -p "test_*.py" -v
@@ -210,6 +244,7 @@ python -m unittest Python/02_python_detayli/test_python_detayli.py -v
 python -m unittest EDA/test_eda.py -v
 python -m unittest MachineLearning/Supervised/01_linear_regresyon/test_linear_regresyon.py -v
 python -m unittest MachineLearning/Supervised/02_logistic_regresyon/test_logistic_regresyon.py -v
+python -m unittest MachineLearning/Supervised/03_classic_ml/test_classic_ml.py -v
 ```
 
 ## Kullanılan veri setleri
@@ -223,6 +258,11 @@ python -m unittest MachineLearning/Supervised/02_logistic_regresyon/test_logisti
 | Diabetes | İlerleme skoru için Linear Regression | Scikit-learn yerleşik veri seti |
 | Breast Cancer Wisconsin | İkili Logistic Regression | Scikit-learn yerleşik veri seti |
 | Wine Recognition | Çok sınıflı Logistic Regression | Scikit-learn yerleşik veri seti |
+| Enerji talebi | Polynomial Regression | Eğitim amacıyla özgün oluşturuldu |
+| Çalışan terfi verisi | Decision Tree | Eğitim amacıyla özgün oluşturuldu |
+| Digits | KNN ve Naive Bayes | Scikit-learn yerleşik veri seti |
+| Moons | SVM kernel karşılaştırması | Scikit-learn veri üreticisi |
+| Makine sensörleri | Boosting karşılaştırması | Eğitim amacıyla özgün oluşturuldu |
 
 Palmer Penguins verisi CC0 lisansıyla yayımlanmıştır. Veri dosyası repoda
 bulunduğundan çalıştırmak için Kaggle hesabı veya API anahtarı gerekmez.
@@ -242,12 +282,15 @@ bulunduğundan çalıştırmak için Kaggle hesabı veya API anahtarı gerekmez.
 - [x] Python temelleri
 - [x] İleri Python ve nesne yönelimli programlama
 - [x] Keşifsel veri analizi
-- [ ] Denetimli makine öğrenmesi (Linear ve Logistic Regression tamamlandı)
+- [x] Denetimli makine öğrenmesi (regresyon, sınıflandırma, ağaçlar, SVM, boosting)
 - [ ] Denetimsiz makine öğrenmesi
 - [ ] Doğal dil işleme
 - [ ] Derin öğrenme ve görüntü işleme
 - [ ] LLM, RAG ve model uyarlama
 - [ ] Docker ve büyük veri uygulamaları
+
+Ayrıntılı ve ders dosyalarıyla eşleştirilmiş plan için
+[`COURSE_ROADMAP.md`](COURSE_ROADMAP.md) dosyasına bakın.
 
 ## Geliştirme yaklaşımı
 
