@@ -1,0 +1,20 @@
+{
+  "cleaning": {
+    "raw_rows": 11538,
+    "clean_rows": 11367,
+    "removed_rows": 171,
+    "customer_count": 600,
+    "invoice_count": 4542
+  },
+  "rfm_customer_count": 600,
+  "selected_k": 5,
+  "silhouette": 0.4757,
+  "davies_bouldin": 0.7016,
+  "segment_counts": {
+    "Risk_Altinda": 153,
+    "Sadik_Musteriler": 132,
+    "Uykudaki_Musteriler": 127,
+    "Potansiyel_Musteriler": 115,
+    "Sampiyonlar": 73
+  }
+}

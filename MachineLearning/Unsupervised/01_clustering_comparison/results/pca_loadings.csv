@@ -1,0 +1,9 @@
+,PC1,PC2
+monthly_visits,0.1712,0.525
+session_minutes,0.4588,0.047
+pages_per_session,0.4624,0.0808
+cart_additions,0.3624,0.31
+purchase_rate,0.4339,-0.1956
+average_order_value,0.4543,-0.1598
+discount_usage_rate,-0.1235,0.5403
+return_rate,-0.0719,0.5137

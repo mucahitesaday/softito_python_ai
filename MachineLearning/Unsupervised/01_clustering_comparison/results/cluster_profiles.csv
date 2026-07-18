@@ -1,0 +1,6 @@
+cluster,monthly_visits,session_minutes,pages_per_session,cart_additions,purchase_rate,average_order_value,discount_usage_rate,return_rate,ClusterSize,segment_name
+0,11.278,12.52,19.961,4.846,0.679,716.815,0.194,0.042,223,Sadik_Yuksek_Deger
+1,17.928,6.557,10.11,3.164,0.238,263.57,0.813,0.12,218,Kampanya_Odakli
+2,4.021,3.411,4.057,0.914,0.09,177.539,0.247,0.078,220,Dusuk_Etkilesim
+3,13.101,9.097,15.053,5.937,0.16,339.002,0.467,0.198,222,Kararsiz_Sepet
+4,16.289,9.0,20.223,5.193,0.539,788.088,0.322,0.215,17,Siradisi_Davranis

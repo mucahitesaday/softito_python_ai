@@ -1,0 +1,5 @@
+model,cluster_count,noise_count,silhouette,davies_bouldin,calinski_harabasz,adjusted_rand
+KMeans,5,0,0.5478,1.3106,991.8104,0.9778
+Agglomerative,5,0,0.5482,1.542,972.1258,0.9871
+GMM,5,0,0.4346,1.3505,951.2808,0.8725
+DBSCAN,4,117,0.5939,0.6232,1728.8477,0.8355

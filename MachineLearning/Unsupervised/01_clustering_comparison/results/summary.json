@@ -1,0 +1,35 @@
+{
+  "data_review": {
+    "shape": [
+      900,
+      10
+    ],
+    "missing_values": 72,
+    "duplicate_rows": 0,
+    "known_profile_counts": {
+      "Dusuk_Etkilesim": 219,
+      "Sadik_Yuksek_Deger": 218,
+      "Kampanya_Odakli": 218,
+      "Kararsiz_Sepet": 218,
+      "Siradisi": 27
+    }
+  },
+  "selected_k": 5,
+  "dbscan_parameters": {
+    "eps": 0.9,
+    "min_samples": 12,
+    "cluster_count": 4,
+    "silhouette_without_noise": 0.5939351504251252
+  },
+  "pca_explained_variance": [
+    0.4927,
+    0.271
+  ],
+  "segment_counts": {
+    "Sadik_Yuksek_Deger": 223,
+    "Kararsiz_Sepet": 222,
+    "Dusuk_Etkilesim": 220,
+    "Kampanya_Odakli": 218,
+    "Siradisi_Davranis": 17
+  }
+}

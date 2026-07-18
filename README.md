@@ -1,7 +1,7 @@
 # Softito Python ve Yapay Zeka Çalışmaları
 
 ![Python](https://img.shields.io/badge/Python-3.9%2B-3776AB?logo=python&logoColor=white)
-![Tests](https://img.shields.io/badge/tests-28%20passed-2EA44F)
+![Tests](https://img.shields.io/badge/tests-33%20passed-2EA44F)
 ![Status](https://img.shields.io/badge/status-geliştiriliyor-F59E0B)
 
 Softito Yapay Zeka Yazılımcılığı eğitimi boyunca işlenen konuların gerçek veya
@@ -23,6 +23,7 @@ yeniden çalıştırılabilecek şekilde hazırlanmıştır.
 | 04 | Linear Regression | Basit/çoklu regresyon, katsayılar ve artık analizi | Tips + Diabetes | Tamamlandı |
 | 05 | Logistic Regression | İkili/çok sınıflı tahmin, ROC ve eşik analizi | Breast Cancer + Wine | Tamamlandı |
 | 06 | Klasik ML Algoritmaları | Polynomial, Tree, KNN/NB, SVM ve Boosting | 5 farklı uygulama | Tamamlandı |
+| 07 | Denetimsiz Öğrenme | Kümeleme karşılaştırması ve RFM segmentasyonu | 2 özgün müşteri veri seti | Tamamlandı |
 
 ## Öne çıkan çalışmalar
 
@@ -112,7 +113,7 @@ One-vs-Rest yaklaşımıyla ayrılması incelendi.
 
 ### 06 — Klasik makine öğrenmesi paketi
 
-Ders arşivindeki Polynomial Regression, Decision Tree, KNN, Naive Bayes, SVM,
+Polynomial Regression, Decision Tree, KNN, Naive Bayes, SVM,
 AdaBoost ve XGBoost başlıkları beş özgün uygulamada bir araya getirildi.
 
 - Enerji talebinde polinom derecesi ve bias–variance karşılaştırması
@@ -126,6 +127,22 @@ Başlıca sonuçlar: 3. derece polinom `R² = 0.9770`, Decision Tree
 Gradient Boosting `ROC-AUC = 0.8730`.
 
 ![SVM karar sınırları](MachineLearning/Supervised/03_classic_ml/04_svm/figures/decision_boundaries.png)
+
+### 07 — Denetimsiz öğrenme ve RFM
+
+Dijital müşteri davranışları üzerinde K-Means, Agglomerative Clustering,
+DBSCAN ve Gaussian Mixture Model karşılaştırıldı. Elbow ve Silhouette ile küme
+sayısı seçildi; PCA, t-SNE ve dendrogram ile yapı görselleştirildi. K-Means,
+dört ana davranış profilinin yanında 17 sıra dışı müşteriyi ayrı bir kümede
+topladı.
+
+İkinci çalışmada 600 müşteriye ait 11.538 e-ticaret işlem satırı temizlenerek
+RFM özellikleri üretildi. Beş müşteri segmenti oluşturuldu ve en iyi K-Means
+çözümünde `Silhouette = 0.4757` elde edildi.
+
+![Kümeleme algoritmaları](MachineLearning/Unsupervised/01_clustering_comparison/figures/pca_model_comparison.png)
+
+![RFM segment profilleri](MachineLearning/Unsupervised/02_rfm_segmentation/figures/segment_profile_heatmap.png)
 
 ## Repo yapısı
 
@@ -142,10 +159,13 @@ softito_python_ai/
 │   ├── 05_feature_engineering/
 │   └── data/
 ├── MachineLearning/
-│   └── Supervised/
-│       ├── 01_linear_regresyon/
-│       ├── 02_logistic_regresyon/
-│       └── 03_classic_ml/
+│   ├── Supervised/
+│   │   ├── 01_linear_regresyon/
+│   │   ├── 02_logistic_regresyon/
+│   │   └── 03_classic_ml/
+│   └── Unsupervised/
+│       ├── 01_clustering_comparison/
+│       └── 02_rfm_segmentation/
 ├── requirements.txt
 └── README.md
 ```
@@ -231,11 +251,13 @@ python MachineLearning/Supervised/03_classic_ml/02_decision_tree/promotion_tree.
 python MachineLearning/Supervised/03_classic_ml/03_knn_naive_bayes/digits_comparison.py
 python MachineLearning/Supervised/03_classic_ml/04_svm/moons_svm.py
 python MachineLearning/Supervised/03_classic_ml/05_boosting/maintenance_boosting.py
+python MachineLearning/Unsupervised/01_clustering_comparison/digital_customer_clustering.py
+python MachineLearning/Unsupervised/02_rfm_segmentation/ecommerce_rfm.py
 ```
 
 ## Testler
 
-Projelerde toplam 28 otomatik test bulunur:
+Projelerde toplam 33 otomatik test bulunur:
 
 ```bash
 python -m unittest discover -s Python/01_python_temelleri -p "test_*.py" -v
@@ -244,6 +266,7 @@ python -m unittest EDA/test_eda.py -v
 python -m unittest MachineLearning/Supervised/01_linear_regresyon/test_linear_regresyon.py -v
 python -m unittest MachineLearning/Supervised/02_logistic_regresyon/test_logistic_regresyon.py -v
 python -m unittest MachineLearning/Supervised/03_classic_ml/test_classic_ml.py -v
+python -m unittest MachineLearning/Unsupervised/test_unsupervised.py -v
 ```
 
 ## Kullanılan veri setleri
@@ -262,6 +285,8 @@ python -m unittest MachineLearning/Supervised/03_classic_ml/test_classic_ml.py -
 | Digits | KNN ve Naive Bayes | Scikit-learn yerleşik veri seti |
 | Moons | SVM kernel karşılaştırması | Scikit-learn veri üreticisi |
 | Makine sensörleri | Boosting karşılaştırması | Eğitim amacıyla özgün oluşturuldu |
+| Dijital müşteri davranışları | Kümeleme algoritmaları | Eğitim amacıyla özgün oluşturuldu |
+| E-ticaret işlemleri | RFM müşteri segmentasyonu | Eğitim amacıyla özgün oluşturuldu |
 
 Palmer Penguins verisi CC0 lisansıyla yayımlanmıştır. Veri dosyası repoda
 bulunduğundan çalıştırmak için Kaggle hesabı veya API anahtarı gerekmez.
@@ -272,28 +297,10 @@ bulunduğundan çalıştırmak için Kaggle hesabı veya API anahtarı gerekmez.
 - Pandas ve NumPy
 - Matplotlib ve Seaborn
 - Scikit-learn
+- SciPy
 - CSV ve JSON
 - `unittest`
 - Git ve GitHub
-
-## Yol haritası
-
-- [x] Python temelleri
-- [x] İleri Python ve nesne yönelimli programlama
-- [x] Keşifsel veri analizi
-- [x] Denetimli makine öğrenmesi (regresyon, sınıflandırma, ağaçlar, SVM, boosting)
-- [ ] Denetimsiz makine öğrenmesi
-- [ ] Doğal dil işleme
-- [ ] Derin öğrenme ve görüntü işleme
-- [ ] LLM, RAG ve model uyarlama
-- [ ] Docker ve büyük veri uygulamaları
-
-## Geliştirme yaklaşımı
-
-Her bölüm ayrı bir branch üzerinde hazırlanır. Kodlar önce yerel ortamda ve
-ardından farklı bir macOS ortamında çalıştırılır. Testler geçtikten sonra pull
-request üzerinden `main` branch'ine birleştirilir. Böylece `main` üzerinde
-yalnızca çalıştığı doğrulanmış dosyalar tutulur.
 
 ## Hazırlayan
 

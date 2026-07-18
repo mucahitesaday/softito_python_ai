@@ -12,3 +12,10 @@ birlikte ele alınır.
 | 01 | Linear Regression | Bahşiş tahmini, diyabet ilerleme tahmini | Tamamlandı |
 | 02 | Logistic Regression | Tümör teşhisi, şarap türü sınıflandırma | Tamamlandı |
 | 03–07 | Klasik ML Paketi | Polynomial, Tree, KNN/NB, SVM, Boosting | Tamamlandı |
+
+## Unsupervised Learning
+
+| No | Konu | Projeler | Durum |
+|---|---|---|---|
+| 01 | Kümeleme algoritmaları | Dijital müşteri davranış segmentasyonu | Tamamlandı |
+| 02 | RFM analizi | E-ticaret müşteri segmentasyonu | Tamamlandı |
